@@ -36,3 +36,11 @@ npm run watch
 ```bash
 npm start
 ```
+
+## See output without browser
+
+After running a build command, you can see the output without opening a browser by running:
+
+```bash
+node dist/main.js
+```
