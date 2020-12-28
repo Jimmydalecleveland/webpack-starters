@@ -1,16 +1,15 @@
 {
-  "name": "webpack-setup",
+  "name": "webpack-starters",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "A collection of different Webpack setups for quick referencing or starting from",
   "scripts": {
     "start": "webpack serve",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production webpack --watch",
-    "build-dev": "webpack --watch"
+    "watch": "webpack --watch",
+    "build": "NODE_ENV=production webpack",
+    "build-dev": "webpack"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Jimmy DC",
   "license": "ISC",
   "devDependencies": {
     "webpack": "^5.4.0",
