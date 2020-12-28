@@ -1,13 +1,20 @@
 import getClasses from "./getClasses";
 
-console.log("ran from index.js");
 getClasses();
 
-const obj = { a: "alpha", b: "bravo" };
+const elvenShieldRecipe = {
+  leatherStrips: 2,
+  ironIngot: 1,
+  refinedMoonstone: 4,
+};
 
-// ES7 Object spread test
-const newObj = { ...obj, c: "charlie" };
-console.log(newObj);
+// ES7 Object spread example
+const elvenGauntletsRecipe = {
+  ...elvenShieldRecipe,
+  leather: 1,
+  refinedMoonstone: 1,
+};
+console.log("ES7 Object spread example: ", elvenGauntletsRecipe);
 
-// ES8 Object.values test
-console.log(Object.values(newObj));
+// ES8 Object.values example
+console.log("ES8 Object.values example", Object.values(elvenGauntletsRecipe));
