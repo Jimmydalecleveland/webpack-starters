@@ -4,20 +4,24 @@ module.exports = {
   // mode defaults to 'production' if not set
   mode: mode,
 
-  // entry not required if using `src/index.js` default
-  // output not required if using `dist/main.js` default
+  entry: "./src/index.ts",
 
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
         use: {
-          // without additional settings, this will reference .babelrc
-          loader: "babel-loader",
+          loader: "ts-loader",
         },
       },
     ],
+  },
+
+  // allows importing '.ts' files without the extension
+  // e.g. `import example from './example'`
+  resolve: {
+    extensions: [".ts", ".js"],
   },
 
   devtool: "source-map",
