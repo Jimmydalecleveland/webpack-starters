@@ -4,6 +4,10 @@ A collection of different Webpack setups for quick referencing or starting from.
 
 Each branch has a different setup for the named purpose, such as `typescript` showing a TypeScript variation.
 
+## `typescript`
+
+This shows a straightforward TypeScript setup, but does include any browser html file like some of the others. Use `node` to run the final `dist/main.js` output.
+
 _NOTE: Typically the `dist` or `public` folder is ignored in git, but for demonstrations purposes I've left it tracked._
 
 ## Start using for a new project, or playground
