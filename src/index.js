@@ -1,7 +1,14 @@
 // Used for method polyfills, and replaces @babel/polyfill
 // Note: the .babelrc configuration options are stripping out
 // any unused polyfills through the `"useBuiltIns": "usage"` property
-import "core-js/stable";
+// import "core-js/stable";
+// ABOVE CURRENTLY DOES NOT WORK WITH BABEL CONFIG
+
+// Polyfill for .values method of Object
+import "core-js/modules/es.object.values";
+// This is required for generators, including async/await
+// It seems that async/await is not built on generators,
+// but babel transpiles is to one for backwards support.
 import "regenerator-runtime/runtime";
 
 import getClasses from "./getClasses";
@@ -34,3 +41,22 @@ for (let i = 0; i < 10; i++) {
     console.log(i);
   }, 1);
 }
+
+// async/await example from MDN
+function resolveAfter2Seconds() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("resolved");
+    }, 2000);
+  });
+}
+
+// This will throw an error without the regenerator-runtime import
+async function asyncCall() {
+  console.log("calling");
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+  // expected output: "resolved"
+}
+
+asyncCall();
