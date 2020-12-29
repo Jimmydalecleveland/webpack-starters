@@ -21,8 +21,10 @@ module.exports = {
           // could replace the next line with "style-loader" here for inline css
           MiniCssExtractPlugin.loader,
           "css-loader",
-          "sass-loader",
           "postcss-loader",
+          // according to the docs, sass-loader should be at the bottom,
+          // which loads it first though I haven't noticed a difference.
+          "sass-loader",
         ],
       },
       {
