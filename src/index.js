@@ -1,3 +1,9 @@
+// Used for method polyfills, and replaces @babel/polyfill
+// Note: the .babelrc configuration options are stripping out
+// any unused polyfills through the `"useBuiltIns": "usage"` property
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+
 import getClasses from "./getClasses";
 
 getClasses();
