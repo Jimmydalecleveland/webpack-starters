@@ -1,15 +1,16 @@
 // Used for method polyfills, and replaces @babel/polyfill
 // Note: the .babelrc configuration options are stripping out
 // any unused polyfills through the `"useBuiltIns": "usage"` property
-// import "core-js/stable";
+// import "core-js";
 // ABOVE CURRENTLY DOES NOT WORK WITH BABEL CONFIG
 
 // Polyfill for .values method of Object
-import "core-js/modules/es.object.values";
+// import "core-js/modules/es.object.values";
+// import "core-js/modules/es.promise";
 // This is required for generators, including async/await
 // It seems that async/await is not built on generators,
 // but babel transpiles is to one for backwards support.
-import "regenerator-runtime/runtime";
+// import "regenerator-runtime/runtime";
 
 import getClasses from "./getClasses";
 
