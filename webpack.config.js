@@ -1,4 +1,6 @@
 const mode = process.env.NODE_ENV || "development";
+// Temporary workaround for 'browserslist' bug that is being patched in the near future
+const target = process.env.NODE_ENV === "production" ? "browserslist" : "web";
 
 module.exports = {
   // mode defaults to 'production' if not set
@@ -20,6 +22,7 @@ module.exports = {
     ],
   },
 
+  target: target,
   devtool: "source-map",
 
   // required if using webpack-dev-server
