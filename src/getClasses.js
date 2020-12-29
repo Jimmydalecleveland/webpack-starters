@@ -1,10 +1,10 @@
-import { wizard } from './wizard'
-import { barbarian } from './barbarian'
+import { wizard } from "./wizard";
+import { barbarian } from "./barbarian";
 
 function getClasses() {
-  console.log("get classes was called")
-  console.log(wizard)
-  console.log(barbarian)
+  console.log("get classes was called");
+  console.log(wizard);
+  console.log(barbarian);
 }
 
-export default getClasses
+export default getClasses;
