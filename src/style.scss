@@ -1,0 +1,26 @@
+:root {
+  --mainBg: salmon;
+}
+
+$light-text: moccasin;
+
+body {
+  /* css variables will fallback to their background color
+  ** from `postcss-preset-env` in final output
+  */
+  background-color: var(--mainBg);
+  color: $light-text;
+}
+
+.container {
+  padding: 1rem;
+
+  /* these lines are here to show autoprefixing on final output */
+  display: flex;
+  background: linear-gradient(to top, black, white);
+
+  h1 {
+    font-size: 68px;
+    text-align: center;
+  }
+}

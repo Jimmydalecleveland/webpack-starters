@@ -1,0 +1,3 @@
+:root{--mainBg: salmon}body{background-color:salmon;background-color:var(--mainBg);color:#ffe4b5}.container{padding:1rem;display:-webkit-box;display:-ms-flexbox;display:flex;background:-webkit-gradient(linear, left bottom, left top, from(black), to(white));background:linear-gradient(to top, black, white)}.container h1{font-size:68px;text-align:center}
+
+/*# sourceMappingURL=main.css.map*/
