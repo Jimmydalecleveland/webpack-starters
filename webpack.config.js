@@ -22,8 +22,8 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           "css-loader",
           "postcss-loader",
-          // according to the docs, sass-loader should be at the bottom,
-          // which loads it first though I haven't noticed a difference.
+          // according to the docs, sass-loader should be at the bottom, which
+          // loads it first to avoid prefixes in your sourcemaps and other issues.
           "sass-loader",
         ],
       },
