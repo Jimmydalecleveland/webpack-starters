@@ -1,15 +1,16 @@
-// Used for method polyfills, and replaces @babel/polyfill
-// Note: the .babelrc configuration options are stripping out
-// any unused polyfills through the `"useBuiltIns": "usage"` property
-// import "core-js";
-// ABOVE CURRENTLY DOES NOT WORK WITH BABEL CONFIG
-
-// Polyfill for .values method of Object
+/**
+ * These commented out imports are the alternative to:
+ * "useBuiltIns": "usage"
+ * in the .babelrc
+ */
 // import "core-js/modules/es.object.values";
 // import "core-js/modules/es.promise";
-// This is required for generators, including async/await
-// It seems that async/await is not built on generators,
-// but babel transpiles is to one for backwards support.
+
+/**
+ * This is required for generators, including async/await
+ * Note: It seems that async/await is not built on generators,
+ * but babel transpiles is to one for backwards support.
+ */
 // import "regenerator-runtime/runtime";
 
 import getClasses from "./getClasses";
@@ -31,7 +32,7 @@ const elvenGauntletsRecipe = {
 console.log("ES7 Object spread example: ", elvenGauntletsRecipe);
 
 // ES8 Object.values example
-// Note: Will not transpile without babel polyfills because it is a new method
+// Note: Will not transpile without babel/imported polyfills because it is a new method
 console.log("ES8 Object.values example", Object.values(elvenGauntletsRecipe));
 
 // Event queue block scoping example
@@ -52,7 +53,6 @@ function resolveAfter2Seconds() {
   });
 }
 
-// This will throw an error without the regenerator-runtime import
 async function asyncCall() {
   console.log("calling");
   const result = await resolveAfter2Seconds();
