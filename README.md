@@ -62,3 +62,9 @@ After running a build command, you can see the output without opening a browser 
 ```bash
 node dist/main.js
 ```
+
+## References
+
+- [github issue comment explaining intended setups for polyfills](https://github.com/babel/babel/issues/9853#issuecomment-619587386)
+- [Babel docs stating @babel/polyfill deprecated and instructions](https://babeljs.io/docs/en/babel-polyfill)
+- [core-js readme on @babel/polyfill deprecation](https://github.com/zloirock/core-js#babelpolyfill)
