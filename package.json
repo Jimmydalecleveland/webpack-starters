@@ -7,7 +7,8 @@
     "start": "webpack serve",
     "watch": "webpack --watch",
     "build": "NODE_ENV=production webpack",
-    "build-dev": "webpack"
+    "build-dev": "webpack",
+    "stats": "NODE_ENV=production webpack --json bundle-stats.json"
   },
   "author": "Jimmy DC",
   "license": "ISC",
