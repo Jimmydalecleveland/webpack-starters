@@ -8,7 +8,7 @@
     "watch": "webpack --watch",
     "build": "NODE_ENV=production webpack",
     "build-dev": "webpack",
-    "stats": "NODE_ENV=production webpack --json bundle-stats.json"
+    "stats": "NODE_ENV=production STATS=server webpack --profile --json bundle-stats.json"
   },
   "author": "Jimmy DC",
   "license": "ISC",
@@ -17,8 +17,14 @@
     "@babel/preset-env": "^7.12.11",
     "babel-loader": "^8.2.2",
     "webpack": "^5.11.1",
+    "webpack-bundle-analyzer": "^4.3.0",
     "webpack-cli": "^4.3.0",
     "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "lodash-es": "^4.17.20",
+    "lodash.get": "^4.4.2",
+    "uuid": "^8.3.2"
+  }
 }
