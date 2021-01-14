@@ -6,6 +6,10 @@ Each branch has a different setup for the named purpose, such as `typescript` sh
 
 _NOTE: Typically the `dist` or `public` folder is ignored in git, but for demonstrations purposes I've left it tracked._
 
+## `react-full-project`
+
+A full project setup with React (JSX) support.
+
 ## Start using for a new project, or playground
 
 1. Clone the repo
