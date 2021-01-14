@@ -10,7 +10,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           // without additional settings, this will reference .babelrc
@@ -22,8 +22,13 @@ module.exports = {
 
   devtool: "source-map",
 
+  resolve: {
+    extensions: [".js", ".jsx"],
+  },
+
   // required if using webpack-dev-server
   devServer: {
     contentBase: "./dist",
+    hot: true,
   },
 };

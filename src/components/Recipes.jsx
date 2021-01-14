@@ -1,3 +1,4 @@
+// Importing "react" is still required when using methods from it
 import { useState } from "react";
 
 const elvenShieldRecipe = {

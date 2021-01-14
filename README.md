@@ -10,6 +10,12 @@ _NOTE: Typically the `dist` or `public` folder is ignored in git, but for demons
 
 A full project setup with React (JSX) support.
 
+It uses the Babel "automatic" runtime setting (which will be the default in Babel 8) for React 17 and up. With this setting you no longer need to import "react" in modules that just use JSX. [More on that here](https://babeljs.io/blog/2020/03/16/7.9.0#a-new-jsx-transform-11154).
+
+Here are some other things this project supports:
+
+- .jsx file extensions, and importing them without adding the extension
+
 ## Start using for a new project, or playground
 
 1. Clone the repo
