@@ -9,7 +9,6 @@ module.exports = {
   mode: mode,
 
   // entry not required if using `src/index.js` default
-  // output not required if using `dist/main.js` default
   output: {
     // output path is required for `clean-webpack-plugin`
     path: path.resolve(__dirname, "dist"),
@@ -20,8 +19,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        test: /\.(s[ac]|c)ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
