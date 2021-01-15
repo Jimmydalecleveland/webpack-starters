@@ -1,29 +1,3 @@
-$bg: peachpuff;
-
-body {
-  margin: 0;
-  background-color: peachpuff;
-  font-size: 26px;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-button {
-  font-size: 1.5rem;
-}
-
-.hero {
-  background: url("../images/swc-banner.jpg");
-  background-size: cover;
-  background-position: center;
-  min-height: 300px;
-  width: 100%;
-}
-
-ul {
-  list-style-image: url("../images/sword-32x32.png");
-}
+@use "variables";
+@use "global";
+@use "hero";

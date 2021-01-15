@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  background-color: peachpuff;
+  font-size: 26px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style-image: url("../images/sword-32x32.png");
+}
