@@ -1,4 +1,7 @@
+const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 const mode = process.env.NODE_ENV || "development";
 
 module.exports = {
@@ -8,6 +11,9 @@ module.exports = {
   // entry not required if using `src/index.js` default
   // output not required if using `dist/main.js` default
   output: {
+    // output path is required for `clean-webpack-plugin`
+    path: path.resolve(__dirname, "dist"),
+    // this places all images processed in an image folder
     assetModuleFilename: "images/[hash][ext][query]",
   },
 
@@ -60,6 +66,7 @@ module.exports = {
   },
 
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),

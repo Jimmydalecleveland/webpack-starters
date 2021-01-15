@@ -4,10 +4,10 @@
   "private": true,
   "description": "A collection of different Webpack setups for quick referencing or starting from",
   "scripts": {
-    "start": "npm run clean && webpack serve",
-    "watch": "npm run clean && webpack --watch",
-    "build": "NODE_ENV=production npm run clean && webpack",
-    "build-dev": "npm run clean && webpack",
+    "start": "webpack serve",
+    "watch": "webpack --watch",
+    "build": "NODE_ENV=production webpack",
+    "build-dev": "webpack",
     "clean": "rm -rf ./dist"
   },
   "author": "Jimmy DC",
@@ -17,6 +17,7 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^4.5.1",
     "style-loader": "^2.0.0",
