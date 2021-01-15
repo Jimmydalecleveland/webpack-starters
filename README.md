@@ -15,6 +15,9 @@ It uses the Babel "automatic" runtime setting (which will be the default in Babe
 Here are some other things this project supports:
 
 - .jsx file extensions, and importing them without adding the extension
+- importing `.css` files into javascript files.
+- importing images (including `.svg`) through `import` syntax in javascript and `url()` syntax in css.
+- automatically inlining images less than 8kb (webpack default, which is configurable) into the javascript bundle output. Anything over 8kb will be created as a resource file in the final output folder.
 
 ## Start using for a new project, or playground
 
