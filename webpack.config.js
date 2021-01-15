@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const mode = process.env.NODE_ENV || "development";
 
 module.exports = {
@@ -57,6 +58,12 @@ module.exports = {
       },
     ],
   },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
+  ],
 
   devtool: "source-map",
 
