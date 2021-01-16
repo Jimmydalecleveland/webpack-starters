@@ -18,10 +18,10 @@ Here are some other things this project supports:
 - JSX syntax through `@babel/preset-react` and `babel-loader`.
 - .jsx file extensions, and importing them without adding the extension.
 - importing `.css` files into javascript files through `css-loader`.
-- Sass: `.scss` and `.sass` formats through `sass-loader`.
+- Sass: `.scss` and `.sass` formats through `sass-loader` and dart sass (`sass`) package.
 - importing images (including `.svg`) through `import` syntax in javascript and `url()` syntax in css.
 - automatically inlining images less than 8kb (webpack default, which is configurable) into the javascript bundle output. Anything over 8kb will be created as a resource file in the final output folder.
-- `html-webpack-plugin` for outputting an `index.html` from a template for proper production builds support.
+- `html-webpack-plugin@next` for outputting an `index.html` from a template for proper production builds support. _NOTE: `html-webpack-plugin` currently recommends installing the @next version for Webpack 5 support_
 - `clean-webpack-plugin` for automatic cleanup of the output directory (`dist/`) on each build.
 
 ## Start using for a new project, or playground
