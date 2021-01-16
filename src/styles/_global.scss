@@ -1,6 +1,9 @@
+@use "variables";
+
 body {
   margin: 0;
-  background-color: peachpuff;
+  background-color: variables.$bg;
+  color: var(--text);
   font-size: 26px;
 }
 
