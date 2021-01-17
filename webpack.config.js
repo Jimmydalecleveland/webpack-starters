@@ -1,17 +1,36 @@
 const path = require("path");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const mode = process.env.NODE_ENV || "development";
-// Temporary workaround for 'browserslist' bug that is being patched in the near future
-const target = process.env.NODE_ENV === "production" ? "browserslist" : "web";
+let mode = "development";
+let target = "web";
+const plugins = [
+  new CleanWebpackPlugin(),
+  new MiniCssExtractPlugin(),
+  new HtmlWebpackPlugin({
+    template: "./src/index.html",
+  }),
+];
+
+if (process.env.NODE_ENV === "production") {
+  mode = "production";
+  // Temporary workaround for 'browserslist' bug that is being patched in the near future
+  target = "browserslist";
+} else {
+  // We only want React Hot Reloading in development mode
+  plugins.push(new ReactRefreshWebpackPlugin());
+}
 
 module.exports = {
   // mode defaults to 'production' if not set
   mode: mode,
 
-  // entry not required if using `src/index.js` default
+  // This is unnecessary in Webpack 5, because it's the default.
+  // However, react-refresh-webpack-plugin can't find the entry without it.
+  entry: "./src/index.js",
+
   output: {
     // output path is required for `clean-webpack-plugin`
     path: path.resolve(__dirname, "dist"),
@@ -77,13 +96,7 @@ module.exports = {
     ],
   },
 
-  plugins: [
-    new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-    }),
-  ],
+  plugins: plugins,
 
   target: target,
 
