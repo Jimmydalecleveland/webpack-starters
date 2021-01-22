@@ -45,6 +45,7 @@ module.exports = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
+            // This is required for asset imports in CSS, such as url()
             options: { publicPath: "" },
           },
           "css-loader",
@@ -85,7 +86,7 @@ module.exports = {
           options: {
             /**
              * From the docs: When set, the given directory will be used
-             *  to cache the results of the loader. Future webpack builds
+             * to cache the results of the loader. Future webpack builds
              * will attempt to read from the cache to avoid needing to run
              * the potentially expensive Babel recompilation process on each run.
              */
