@@ -18,8 +18,10 @@ if (process.env.NODE_ENV === "production") {
   mode = "production";
   // Temporary workaround for 'browserslist' bug that is being patched in the near future
   target = "browserslist";
-} else {
-  // We only want React Hot Reloading in development mode
+}
+
+if (process.env.SERVE) {
+  // We only want React Hot Reloading in serve mode
   plugins.push(new ReactRefreshWebpackPlugin());
 }
 

@@ -4,7 +4,7 @@
   "private": true,
   "description": "A collection of different Webpack setups for quick referencing or starting from",
   "scripts": {
-    "start": "webpack serve",
+    "start": "SERVE=true webpack serve",
     "watch": "webpack --watch",
     "build": "NODE_ENV=production webpack",
     "build-dev": "webpack",
